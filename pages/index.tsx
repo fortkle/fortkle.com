@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <p>this is top page.</p>
+      <Link href="/posts/[id]" as="/posts/sample"><a>go to post page</a></Link>
     </div>
   )
 }
