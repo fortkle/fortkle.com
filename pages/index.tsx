@@ -1,15 +1,15 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Layout, { siteTitle } from '../components/layout'
 
 export default function Home() {
   return (
-    <div className="container">
+    <Layout home>
       <Head>
-        <title>FRTKL</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>{siteTitle}</title>
       </Head>
       <p>this is top page.</p>
       <Link href="/posts/[id]" as="/posts/sample"><a>go to post page</a></Link>
-    </div>
+    </Layout>
   )
 }

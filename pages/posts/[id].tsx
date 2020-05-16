@@ -1,5 +1,9 @@
+import Layout from '../../components/layout'
+
 export default function Post() {
   return (
-    <p>this is post page.</p>
+    <Layout>
+      <p>this is post page.</p>
+    </Layout>
   )
 }
