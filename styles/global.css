@@ -27,3 +27,13 @@ img {
     max-width: 100%;
     display: block;
 }
+
+time {
+    color: #999;
+}
+
+h5 {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    margin-bottom: 0px;
+}
