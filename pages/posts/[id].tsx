@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Error from 'next/error'
 import { useRouter } from 'next/router'
-import Layout from '../../components/layout'
+import Layout, { siteTitle } from '../../components/layout'
 import Date from '../../components/date'
 import Profile from '../../components/profile'
 import { getRecentPostIds, getPostData } from '../../lib/posts'
@@ -19,7 +19,7 @@ export default function Post({ postData }) {
   return (
     <Layout>
       <Head>
-        <title>{postData.title}</title>
+        <title>{postData.title} - { siteTitle }</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/darcula.min.css" />
       </Head>
       <article>
