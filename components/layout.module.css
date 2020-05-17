@@ -7,23 +7,25 @@
 .header {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 }
 
 .headerImage {
-    width: 6rem;
-    height: 6rem;
-    left: -1rem;
-}
-
-.headerHomeImage {
-    width: 8rem;
-    height: 8rem;
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 .headerTitle {
-    margin-right: 2rem;
+    padding-top: 0.2rem;
+    font-size: 1rem;
+    float: left;
+    padding-left: 30px;
+    background: url('/images/logo.png') no-repeat left center;
+}
+
+.headerTitle a {
+    color: #454545;
 }
 
 .backToHome {

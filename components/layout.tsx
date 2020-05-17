@@ -18,31 +18,13 @@ export default function Layout({ children, home }: Props) {
       </Head>
       <header className={styles.header}>
         {home ? (
-          <>
-            <img
-              src="/images/logo.png"
-              className={styles.headerHomeImage}
-              alt={siteTitle}
-            />
-            <h1 className={styles.headerTitle}>{siteTitle}</h1>
-          </>
+          <h1 className={styles.headerTitle}>{siteTitle}</h1>
         ) : (
-          <>
+          <h2 className={styles.headerTitle}>
             <Link href="/">
-              <a>
-                <img
-                  src="/images/logo.png"
-                  className={styles.headerImage}
-                  alt={siteTitle}
-                />
-              </a>
+              <a>{siteTitle}</a>
             </Link>
-            <h2 className={styles.headerTitle}>
-              <Link href="/">
-                <a>{siteTitle}</a>
-              </Link>
-            </h2>
-          </>
+          </h2>
         )}
       </header>
       <main>{children}</main>
