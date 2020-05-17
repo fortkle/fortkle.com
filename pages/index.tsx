@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
 import PostList from '../components/postList'
+import Profile from '../components/profile'
 import { getSortedPostsData } from '../lib/posts'
 
 type Props = {
@@ -14,9 +15,8 @@ export default function Home({ allPostsData }: Props) {
         <title>{siteTitle}</title>
       </Head>
       <section>
-        <h1>Fukuaki TAKANO is...</h1>
-        <p>a web engineer.</p>
-        <p>Please contact me via twitter.  <a href="https://twitter.com/fortkle" target="_blank" rel="noopener">@fortkle</a></p>
+        <h2>Fukuaki TAKANO is...</h2>
+        <Profile />
       </section>
       <section>
         <h2>Blog</h2>

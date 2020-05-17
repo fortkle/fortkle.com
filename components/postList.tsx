@@ -1,5 +1,5 @@
-import Link from "next/link";
-import Date from "./date";
+import Link from 'next/link'
+import Date from './date'
 import styles from './postList.module.css'
 
 type Props = {
