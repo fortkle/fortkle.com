@@ -29,7 +29,9 @@ img {
 }
 
 time {
+    display: block;
     color: #999;
+    margin-bottom: 1.25rem;
 }
 
 h5 {
