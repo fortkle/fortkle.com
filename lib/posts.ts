@@ -10,7 +10,7 @@ import toc from 'remark-toc'
 const url = 'https://api.esa.io/v1/teams/fortkle'
 
 export async function getSortedPostsData() {
-  const params = { sort: 'created', q: 'category:posts', per_page: '100' };
+  const params = { sort: 'created', q: 'in:posts', per_page: '100' };
   const qs = new URLSearchParams(params);
 
   const response = await fetch(
@@ -41,7 +41,7 @@ export async function getSortedPostsData() {
 }
 
 export async function getRecentPostIds() {
-  const params = { sort: 'created', q: 'category:posts', per_page: '1' };
+  const params = { sort: 'created', q: 'in:posts', per_page: '1' };
   const qs = new URLSearchParams(params);
 
   const response = await fetch(
