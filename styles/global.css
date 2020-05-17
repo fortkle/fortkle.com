@@ -28,6 +28,10 @@ img {
     display: block;
 }
 
+pre {
+    white-space: pre-wrap;
+}
+
 time {
     display: block;
     color: #999;

@@ -1,11 +1,17 @@
 import Head from 'next/head'
 import Error from 'next/error'
+import { useRouter } from 'next/router'
 import Layout from '../../components/layout'
 import Date from '../../components/date'
 import Profile from '../../components/profile'
 import { getRecentPostIds, getPostData } from '../../lib/posts'
 
 export default function Post({ postData }) {
+  const router = useRouter()
+  if (router.isFallback) {
+    return <div>Loading...</div>
+  }
+
   if (!postData) {
     return <Error statusCode={404} />
   }
