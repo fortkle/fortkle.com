@@ -39,3 +39,12 @@ h5 {
     padding-top: 20px;
     margin-bottom: 0px;
 }
+
+h5#目次 {
+    border: none;
+}
+
+h5#目次 + ul {
+    margin: 0 auto;
+    line-height: 1.3;
+}

@@ -4,6 +4,8 @@ import matter from 'gray-matter'
 import remark from 'remark'
 import html from 'remark-html'
 import highlight from 'remark-highlight.js'
+import slug from 'remark-slug'
+import toc from 'remark-toc'
 
 const url = 'https://api.esa.io/v1/teams/fortkle'
 
@@ -76,6 +78,8 @@ export async function getPostData(id: string) {
   const processedContent = await remark()
     .use(html)
     .use(highlight)
+    .use(slug)
+    .use(toc, { heading: '目次', maxDepth: 3 })
     .process(matterResult.content)
   const contentHtml = processedContent.toString()
 
