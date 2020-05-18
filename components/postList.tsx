@@ -13,9 +13,9 @@ export default function PostList({ postsData }: Props) {
 
   return (
     <ul className={styles.list}>
-    {postsData.map(( { id, date, title }) => (
+    {postsData.map(( { id, slug, date, title }) => (
         <li className={styles.listItem} key={id}>
-          <Link href="/posts/[id]" as={`/posts/${id}`}>
+          <Link href="/posts/[slug]" as={`/posts/${slug}`}>
             <a>{title}</a>
           </Link>
           <br />

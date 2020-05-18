@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import Layout, { siteTitle } from '../../components/layout'
 import Date from '../../components/date'
 import Profile from '../../components/profile'
-import { getRecentPostIds, getPostData } from '../../lib/posts'
+import { getRecentPostSlugs, getPostData } from '../../lib/posts'
 
 export default function Post({ postData }) {
   const router = useRouter()
@@ -38,7 +38,7 @@ export default function Post({ postData }) {
 }
 
 export async function getStaticPaths() {
-  const paths = await getRecentPostIds()
+  const paths = await getRecentPostSlugs()
   return {
     paths,
     fallback: true,
@@ -46,7 +46,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.id)
+  const postData = await getPostData(params.slug)
   return {
     props: {
       postData
