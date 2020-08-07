@@ -1,8 +1,8 @@
+import { useEffect } from 'react'
 import { AppProps } from 'next/app'
+import Router from 'next/router'
 import '../styles/global.css'
 import * as gtag from '../lib/gtags'
-import { useEffect } from 'react'
-import { Router } from 'next/router'
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
