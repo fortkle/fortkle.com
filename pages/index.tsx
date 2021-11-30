@@ -1,14 +1,8 @@
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
-import PostList from '../components/postList'
 import Profile from '../components/profile'
-import { getSortedPostsData } from '../lib/posts'
 
-type Props = {
-  allPostsData: any
-}
-
-export default function Home({ allPostsData }: Props) {
+export default function Home() {
   return (
     <Layout home>
       <Head>
@@ -19,18 +13,13 @@ export default function Home({ allPostsData }: Props) {
         <Profile />
       </section>
       <section>
-        <h2>Blog</h2>
-        <PostList postsData={allPostsData} />
+        <h2>Links</h2>
+        <ul>
+          <li><a href="https://github.com/fortkle" target="_blank">GitHub</a></li>
+          <li><a href="https://twitter.com/fortkle" target="_blank">Twitter</a></li>
+          <li><a href="https://blog.fortkle.com" target="_blank">Blog</a></li>
+        </ul>
       </section>
     </Layout>
   )
-}
-
-export async function getStaticProps() {
-  const allPostsData = await getSortedPostsData()
-  return {
-    props: {
-      allPostsData
-    }
-  }
 }
