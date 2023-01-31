@@ -9,7 +9,7 @@ export default function Profile() {
         alt="fortkle icon"
       />
       <p className={styles.profileText}>
-        Engineering Manager at Connehito inc.<br />
+        Software Engineer at AnotherBall inc.<br />
         <span className={styles.lightText}>Please contact me via twitter.  <a href="https://twitter.com/fortkle" target="_blank" rel="noopener">@fortkle</a></span>
       </p>
     </div>
